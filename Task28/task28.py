@@ -1,13 +1,15 @@
-def sum(a,b,summa):
-    if (summa < a + b):
-        return sum(a, b, summa + 1)
+def sum(a,b):
+    if (a == 0):
+        return b
     else:
-        return summa 
-
+        a -= 1
+        b += 1
+        return sum(a,b)
+    
 print("Введите число А: ")
 num1 = int(input())
 print("Введите число B: ")
 num2 = int(input())
-cur_sum = 0
 
-print(sum(num1,num2, cur_sum))
+
+print(sum(num1,num2))
