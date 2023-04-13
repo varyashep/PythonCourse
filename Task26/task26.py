@@ -1,10 +1,9 @@
 def getSquare(num1: int, num2: int) -> int:
-    k = 1
-    finalNum = 1
-    while k <= num2:
-        finalNum *= num1
-        k += 1
-    return finalNum
+    if num2 > 1:
+        num2 -= 1
+        return num1 * getSquare(num1, num2)
+    else:
+        return num1
 
 print("Введите число A: ")
 A = int(input())
